@@ -1,8 +1,8 @@
 from typing import Protocol
 
-from app.application.models import Currency
-from app.application.constants import Ticker
-from app.application.value_objects import UnixTimestamp
+from mera_capital.application.models.currency import Currency
+from mera_capital.application.constants import Ticker
+from mera_capital.application.value_objects import UnixTimestamp
 
 
 class CurrencyGateway(Protocol):
@@ -15,5 +15,5 @@ class CurrencyGateway(Protocol):
         ticker: Ticker,
         start: UnixTimestamp | None,
         end: UnixTimestamp | None,
-    ) -> tuple[Ticker, ...]:
+    ) -> tuple[Currency, ...]:
         raise NotImplementedError

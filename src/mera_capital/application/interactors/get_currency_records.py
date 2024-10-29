@@ -1,6 +1,6 @@
-from app.application.gateways import CurrencyGateway
-from app.application.models import Currency
-from app.application.commands import GetCurrnecyRecordCommand
+from mera_capital.application.gateways import CurrencyGateway
+from mera_capital.application.models import Currency
+from mera_capital.application.commands import GetCurrnecyRecordCommand
 
 
 class GetCurrencyRecordProcessor:

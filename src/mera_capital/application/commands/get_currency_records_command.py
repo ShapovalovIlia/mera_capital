@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
-from app.application.value_objects import UnixTimestamp
-from app.application.constants import Ticker
+from mera_capital.application.value_objects import UnixTimestamp
+from mera_capital.application.constants import Ticker
 
 
 @dataclass(frozen=True, slots=True)
