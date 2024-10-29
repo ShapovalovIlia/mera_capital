@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "mera-capital"
+version = "0.1.0"
+description = ""
+authors = ["Shapovalov_Ilia <ilia-shapovalov04@mail.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mypy = "^1.13.0"
+ruff = "^0.7.1"
+pre-commit = "^4.0.1"
+aiohttp = "^3.10.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
