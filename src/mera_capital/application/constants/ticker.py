@@ -2,5 +2,5 @@ from enum import Enum
 
 
 class Ticker(Enum):
-    BTC = "BTC"
-    ETH = "ETH"
+    BTC = "btc_usd"
+    ETH = "eth_usd"
