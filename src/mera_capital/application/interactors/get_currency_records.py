@@ -12,7 +12,7 @@ class GetCurrencyRecordProcessor:
 
     async def process(
         self, command: GetCurrnecyRecordCommand
-    ) -> tuple[Currency, ...]:
-        return await self.currency_gateway.from_interval(
+    ) -> list[Currency]:
+        return await self.currency_gateway.by_interval(
             ticker=command.ticker, start=command.start, end=command.end
         )

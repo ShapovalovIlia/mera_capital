@@ -9,11 +9,14 @@ class CurrencyGateway(Protocol):
     async def save(self, currency: Currency) -> None:
         raise NotImplementedError
 
-    async def from_interval(
+    async def save_many(self, currencies: list[Currency]) -> None:
+        raise NotImplementedError
+
+    async def by_interval(
         self,
         *,
         ticker: Ticker,
         start: UnixTimestamp | None,
         end: UnixTimestamp | None,
-    ) -> tuple[Currency, ...]:
+    ) -> list[Currency]:
         raise NotImplementedError

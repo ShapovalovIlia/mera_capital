@@ -1,3 +1,3 @@
-__all__ = ["IClient"]
+__all__ = ["DerebitClient"]
 
-from mera_capital.application.client.client_interface import IClient
+from mera_capital.application.client.derebit_client import DerebitClient

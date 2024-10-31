@@ -1,8 +1,9 @@
 from dataclasses import dataclass
+from typing import Iterable
 
 from mera_capital.application.constants import Ticker
 
 
 @dataclass(frozen=True, slots=True)
-class SyncCurrPriceCommand:
-    ticker: Ticker
+class SyncCurrencyPriceCommand:
+    tickers: Iterable[Ticker]
