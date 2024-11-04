@@ -28,5 +28,5 @@ def postgres_config_from_env() -> PostgesConfig:
     db_user = env_var_by_key("POSTGRES_USER")
 
     return PostgesConfig(
-        f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+        f"postgresql+asyncpg://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
     )

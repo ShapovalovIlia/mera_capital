@@ -19,18 +19,19 @@ class CurrencyGatewayImpl:
         await self._connection.execute(stmt)
 
     async def save_many(self, currencies: list[Currency]) -> None:
-        stmt = insert(currnecy_table).values(
-            [
-                {
-                    "id": currency.id,
-                    "ticker": currency.ticker,
-                    "price": currency.price,
-                    "created_at": currency.created_at,
-                }
-                for currency in currencies
-            ]
-        )
-        await self._connection.execute(stmt)
+        async with self._connection.begin() as conn:
+            stmt = insert(currnecy_table).values(
+                [
+                    {
+                        "id": currency.id,
+                        "ticker": currency.ticker,
+                        "price": currency.price,
+                        "created_at": currency.created_at,
+                    }
+                    for currency in currencies
+                ]
+            )
+            await conn.execute(stmt)
 
     async def by_interval(
         self,

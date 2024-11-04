@@ -12,12 +12,13 @@ ruff = "^0.7.1"
 pre-commit = "^4.0.1"
 aiohttp = "^3.10.10"
 alembic = "^1.13.3"
-psycopg2-binary = "^2.9.10"
 uuid7 = "^0.1.0"
 fastapi = "^0.115.4"
 uvicorn = "^0.32.0"
 types-psycopg2 = "^2.9.21.20241019"
 dishka = "^1.4.0"
+asyncpg = "^0.30.0"
+psycopg2-binary = "^2.9.10"
 
 
 [build-system]
